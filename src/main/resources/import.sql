@@ -21,3 +21,6 @@ INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_id) VALUES ('2nd
 INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Course Introduction', 'Learn how to get started with Spring Boot', 1, 'https://img.icons8.com/color/48/000000/spring-logo.png', 1, 1);
 INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Forum', 'Tire suas duvidas', 2, 'https://img.icons8.com/color/48/000000/spring-logo.png', 2, 1);
 INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Lives', 'Lives exclusivas', 3, 'https://img.icons8.com/color/48/000000/spring-logo.png', 0, 1);
+
+INSERT INTO tb_section (title, description, position, image_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 1', 'primeiro capitulo', 1, 'https://img.icons8.com/color/48/000000/spring-logo.png', 1, NULL);
+INSERT INTO tb_section (title, description, position, image_Uri, resource_id, prerequisite_id) VALUES ('Setup', 'Setup your computer', 2, 'https://img.icons8.com/color/48/000000/spring-logo.png', 1, 1);
