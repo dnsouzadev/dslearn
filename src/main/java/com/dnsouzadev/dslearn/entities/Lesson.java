@@ -4,9 +4,7 @@ import jakarta.persistence.*;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "tb_lesson")
@@ -25,6 +23,9 @@ public abstract class Lesson implements Serializable {
     @ManyToOne
     @JoinColumn(name = "section_id")
     private Section section;
+
+    @OneToMany(mappedBy = "lesson")
+    private List<Deliver> deliveries = new ArrayList<>();
 
     @ManyToMany
     @JoinTable(name = "tb_lessons_done",
@@ -80,6 +81,10 @@ public abstract class Lesson implements Serializable {
 
     public Set<Enrollment> getEnrollmentsDone() {
         return enrollmentsDone;
+    }
+
+    public List<Deliver> getDeliveries() {
+        return deliveries;
     }
 
     @Override

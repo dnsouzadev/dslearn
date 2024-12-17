@@ -4,10 +4,7 @@ import com.dnsouzadev.dslearn.entities.pk.EnrollmentPK;
 import jakarta.persistence.*;
 
 import java.time.Instant;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "tb_enrollment")
@@ -24,6 +21,9 @@ public class Enrollment {
 
     @ManyToMany(mappedBy = "enrollmentsDone")
     private Set<Lesson> lessonsDone = new HashSet<>();
+
+    @OneToMany(mappedBy = "enrollment")
+    private List<Deliver> deliveries = new ArrayList<>();
 
     public Enrollment() {}
 
@@ -86,6 +86,10 @@ public class Enrollment {
 
     public Set<Lesson> getLessonsDone() {
         return lessonsDone;
+    }
+
+    public List<Deliver> getDeliveries() {
+        return deliveries;
     }
 
     @Override
