@@ -24,3 +24,4 @@ INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) 
 
 INSERT INTO tb_section (title, description, position, image_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 1', 'primeiro capitulo', 1, 'https://img.icons8.com/color/48/000000/spring-logo.png', 1, NULL);
 INSERT INTO tb_section (title, description, position, image_Uri, resource_id, prerequisite_id) VALUES ('Setup', 'Setup your computer', 2, 'https://img.icons8.com/color/48/000000/spring-logo.png', 1, 1);
+INSERT INTO tb_section (title, description, position, image_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 2', 'segundo capitulo', 3, 'https://img.icons8.com/color/48/000000/spring-logo.png', 1, 2);
